@@ -1,0 +1,30 @@
+{
+  "name": "react-one-pager-boilerplate",
+  "version": "0.0.1",
+  "description": "a single-page React app boilerplate w/ react-scroll",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "npm run build-server && npm run build-client",
+    "build-server": "babel src/server --out-dir ./dist",
+    "build-client": "babel src/client --copy-files --out-dir ./dist/public",
+    "start": "node ./dist/index.js"
+  },
+  "keywords": [
+    "react",
+    "app",
+    "spa",
+    "single-page",
+    "boilerplate"
+  ],
+  "author": "jayhathaway",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.6.0"
+  }
+}
