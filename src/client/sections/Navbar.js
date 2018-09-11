@@ -5,7 +5,6 @@ const scroll = Scroll.animateScroll;
 const scrollSpy = Scroll.scrollSpy;
 import styled from 'styled-components';
 
-
 const Wrapper = styled.nav`
   width: 100%;
   position: -webkit-sticky;
@@ -19,13 +18,23 @@ const Wrapper = styled.nav`
   align-content: center;
   padding: 0 0.5em;
   height: auto;
-  font-family: Sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  background-color: rgba(1, 1, 1, 0.5);
+  background-color: PaleGoldenRod;
   transition: background 300ms ease-out;
-  color: white;
+  color: black;
   `
+  const Navlist = styled.ul`
+    list-style-type: none;
+    text-align: right;
+    display: inline-block;
+    margin: 1em 0;
+      li {
+        display: inline-block;
+        padding: 0 0.5em;
+      }
+  `
+
 
 class Navbar extends Component {
   render() {
@@ -34,7 +43,7 @@ class Navbar extends Component {
         <a onClick={() => scroll.scrollToTop()}>
           <h1 id="logo">Logo Can Go Here</h1>
         </a>
-        <ul className="nav-list">
+        <Navlist>
           <li><Link
             activeClass="active"
             to="header-element"
@@ -62,7 +71,7 @@ class Navbar extends Component {
             offset={0}>
             <span>The Footer</span>
           </Link></li>
-        </ul>
+        </Navlist>
       </Wrapper>
     )
   }

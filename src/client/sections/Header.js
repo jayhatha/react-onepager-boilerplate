@@ -17,7 +17,14 @@ const Title = styled.h1 `
 const Wrapper = styled.header `
   background: papayawhip;
   padding: 20vh;
-  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
 `;
 
 class Header extends Component {
