@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import Scroll from 'react-scroll';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const Link = Scroll.Link;
 const scroll = Scroll.animateScroll;
 const scrollSpy = Scroll.scrollSpy;
 const Element = Scroll.Element;
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
 const Title = styled.h1 `
   font-size: 1.5em;
   text-align: center;
   color: palevioletred;
+  animation: 2s ${fadeIn} ease-out;
 `;
 
 // Create a Wrapper component that'll render a <section> tag with some styles
