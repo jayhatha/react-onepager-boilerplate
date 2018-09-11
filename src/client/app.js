@@ -8,7 +8,9 @@ class App extends Component {
     render() {
         return (
             <div className='app'>
+            <div>
                 <Navbar /> 
+                </div>
                 <Header />
                 <Body />
                 <Footer />

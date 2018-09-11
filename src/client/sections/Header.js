@@ -14,22 +14,23 @@ const Title = styled.h1 `
 `;
 
 // Create a Wrapper component that'll render a <section> tag with some styles
-const Wrapper = styled.section `
-  padding: 4em;
+const Wrapper = styled.header `
   background: papayawhip;
+  padding: 20vh;
+  margin: 0 auto;
 `;
 
 class Header extends Component {
   render() {
     return (
       <Element name="header-element">
-      <header className="header fadeIn">
-      <Wrapper>
+    <Wrapper>
+  
     <Title>
       Here's a cool header or something!
     </Title>
-  </Wrapper>
-      </header>
+  
+      </Wrapper>
       </Element>
     );
   }
