@@ -3,7 +3,7 @@ import Scroll from 'react-scroll';
 const Link = Scroll.Link;
 const scroll = Scroll.animateScroll;
 const scrollSpy = Scroll.scrollSpy;
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const Wrapper = styled.nav`
   width: 100%;
@@ -18,30 +18,43 @@ const Wrapper = styled.nav`
   align-content: center;
   padding: 0 0.5em;
   height: auto;
-  font-size: 1rem;
-  font-weight: 500;
   background-color: PaleGoldenRod;
   transition: background 300ms ease-out;
   color: black;
   `
-  const Navlist = styled.ul`
-    list-style-type: none;
-    text-align: right;
-    display: inline-block;
-    margin: 1em 0;
-      li {
-        display: inline-block;
-        padding: 0 0.5em;
-      }
-  `
+const Navlist = styled.ul`
+  list-style-type: none;
+  text-align: right;
+  font-size: 1.3em;
+  display: inline-block;
+    li {
+      display: inline-block;
+      padding: 0 0.5em;
+    }
+`
+const zoomIn = keyframes`
+  from {
+    transform: scale(0);
+  }
 
+  to {
+    transform: scale(1);
+  }
+`;
+
+const Logo = styled.h1`
+    font-size: 1.3em;
+    padding: 0.2em;
+    display: inline-block;
+    animation: ${zoomIn} 1s linear 1;
+`
 
 class Navbar extends Component {
   render() {
     return (
       <Wrapper>
         <a onClick={() => scroll.scrollToTop()}>
-          <h1 id="logo">Logo Can Go Here</h1>
+          <Logo>&lt; 😩👌 &gt;</Logo>
         </a>
         <Navlist>
           <li><Link
