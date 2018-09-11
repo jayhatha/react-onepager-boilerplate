@@ -6,8 +6,15 @@ const Element = Scroll.Element;
 
 const Wrapper = styled.section `
   background: PaleTurquoise;
-  padding: 40vh;
-  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 20vh;
 `;
 
 class Body extends Component {

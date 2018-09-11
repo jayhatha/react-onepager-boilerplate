@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Element = Scroll.Element;
 
-const Wrapper = styled.section `
+const Wrapper = styled.footer`
   background: MediumOrchid;
   padding: 5vh;
   box-sizing: border-box;
@@ -16,9 +16,7 @@ class Footer extends Component {
     return (
       <Element name="footer-element">
       <Wrapper>
-      <footer>
         <h2>Footer here, please.</h2>
-      </footer>
       </Wrapper>
     </Element>
     );
